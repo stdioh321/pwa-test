@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Manifest</title>
+		<link rel="manifest" href="/manifest.json">
+		<script>
+		if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/sw.js')
+		.then(function () {
+		console.log('service worker registered');
+		})
+		.catch(function () {
+		console.warn('service worker failed');
+		});
+		}
+		</script>
+	</head>
+	<body>
+		<h1>
+		My Manifest SW
+		</h1>
+	</body>
+</html>
